@@ -1,0 +1,42 @@
+
+<p>This is friend page</p>
+
+
+<input placeholder="Search" ng-model = "filterText"> {{ filterText }}
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Action</th>
+            <th>____</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+           <td><input class="form-control" ng-model="newName"></td> 
+           <td><input class="form-control" ng-model="newEmail"></td> 
+           <td><input class="form-control" ng-model="newPhone"></td> 
+           <td>
+               <button class="btn btn-primary" ng-click="addFriend()" >add</button>
+            </td>
+            <td>
+               <button class="btn btn-primary" ng-click="editFriend(editedId)" >update</button>
+            </td>
+        </tr>
+        <tr ng-repeat="item in friendList | filter: filterText | orderBy: 'name'">
+            <td>{{item.name | uppercase }}</td>
+            <td>{{item.email | lowercase }}</td>
+            <td>{{item.phone }}</td>
+            <td>
+               <button class="btn btn-danger" ng-click="removeFriend(item.id)">remove</button>
+            </td>
+            <td>
+               <button class="btn btn-success" ng-click="select(item.id)">select</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

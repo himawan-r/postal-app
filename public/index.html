@@ -1,0 +1,30 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />-->
+        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous" />-->
+        <link rel="stylesheet" href="vendor/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+        <link rel="stylesheet" href="vendor/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous" />
+        
+        <title>Grace Site</title>
+    </head>
+    <body >
+        <div ng-app="myApp" class="container">
+            <!--instantiate elements-->
+            <header ng-include="'template/header.html'"></header> <br>
+            <div ui-view="main"></div> <br>
+            <footer ng-include="'template/footer.html'"></footer>
+        </div>
+
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>-->
+        <script src="vendor/angular/angular.min.js"></script>
+        <script src="vendor/ng-idle/angular-idle.min.js"></script>
+        <script src="vendor/angular-ui-router/release/angular-ui-router.min.js"></script>  
+        <script src="vendor/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+        <script src="vendor/angular-strap/dist/angular-strap.min.js"></script>
+        <script src="vendor/angular-strap/dist/angular-strap.tpl.min.js"></script>
+
+        <script src="index.js"></script>
+        <script src="./friend/friendController.js"></script>
+    </body>
+</html> 
